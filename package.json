@@ -1,13 +1,21 @@
 {
   "name": "GeekSportWeb",
+  "description": "App for GeekSportWeb",
   "version": "0.0.1",
   "private": true,
+  "author": {
+    "name": "Jed & Z"
+  },
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "lint": "eslint .",
+    "all": "yarn ios && yarn android",
     "start": "react-native start",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "postversion": "react-native-version",
+    "release:android": "cd android && ./gradlew assembleRelease",
     "test": "jest"
+
   },
   "dependencies": {
     "react": "18.2.0",
