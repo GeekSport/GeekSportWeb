@@ -16,8 +16,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import { Button } from '@ant-design/react-native';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -45,6 +45,7 @@ function Section({children, title}: SectionProps): React.JSX.Element {
         ]}>
         {children}
       </Text>
+      <Button>Start</Button>
     </View>
   );
 }

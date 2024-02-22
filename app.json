@@ -1,4 +1,8 @@
 {
   "name": "GeekSportWeb",
-  "displayName": "GeekSportWeb"
+  "displayName": "GeekSportWeb",
+  "packagerOpts": {
+    "config": "metro.config.js"
+  }
 }
+
