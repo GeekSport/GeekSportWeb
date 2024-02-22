@@ -72,7 +72,6 @@ function App(): React.JSX.Element {
           <Section title="欢迎开发此APP">
             新的开始！ <Text style={styles.highlight}>你徐哥大制作</Text>
           </Section>
-          <Section title="Learn More">阅读文档，了解下一步该做什么：</Section>
         </View>
       </ScrollView>
     </SafeAreaView>
