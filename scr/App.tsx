@@ -70,7 +70,7 @@ function App(): React.JSX.Element {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="欢迎开发此APP">
-            新的开始！ <Text style={styles.highlight}>你徐哥大制作</Text>
+            新的开始！冲！ <Text style={styles.highlight}>你徐哥大制作</Text>
           </Section>
         </View>
       </ScrollView>

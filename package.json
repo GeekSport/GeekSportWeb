@@ -7,15 +7,14 @@
     "name": "Jed & Z"
   },
   "scripts": {
+    "start": "react-native start",
+    "all": "yarn ios && yarn android",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "all": "yarn ios && yarn android",
-    "start": "react-native start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "postversion": "react-native-version",
     "release:android": "cd android && ./gradlew assembleRelease",
     "test": "jest"
-
   },
   "dependencies": {
     "react": "18.2.0",
