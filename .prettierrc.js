@@ -1,6 +1,10 @@
 module.exports = {
-  bracketSpacing: false,
-  jsxBracketSameLine: true,
+  semi: true,
+  arrowParens: 'avoid',
   singleQuote: true,
-  trailingComma: 'all',
+  tabWidth: 2,
+  preserve: 'preserve',
+  useTabs: false,
+  vueIndentScriptAndStyle: true,
 };
+

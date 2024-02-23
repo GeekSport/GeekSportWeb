@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: '@react-native-community',
+  extends: ["prettier", '@react-native-community',  'eslint:recommended' ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   rules: {
@@ -11,7 +11,7 @@ module.exports = {
     'prettier/prettier': [
       'off',
       {
-        semi: false,
+        semi: true,
         arrowParens: 'avoid',
         singleQuote: true,
         tabWidth: 2,
@@ -26,14 +26,6 @@ module.exports = {
     'import/order': 'off',
     'import/no-named-as-default-member': 'off',
     'unicorn/prefer-text-content': 'off',
-
-    /*Possible Errors*/
-
-    // 数组和对象键值对最后一个逗号，
-    // never参数：不能带末尾的逗号,
-    // always参数：必须带末尾的逗号，
-    // always-multiline：多行模式必须带逗号，单行模式不能带逗号
-    'comma-dangle': [0, 'never'],
 
     // 禁止在条件表达式中使用赋值语句
     'no-cond-assign': 0,
@@ -118,7 +110,7 @@ module.exports = {
     // 保证typeof 操作符返回的结果必须和上面六个字符串作比较
     'valid-typeof': 2,
 
-    /*Best Practices*/
+    /* Best Practices*/
 
     // 在声明对象时getter和setter需成对出现
     'accessor-pairs': 2,
@@ -216,9 +208,6 @@ module.exports = {
     // 禁止隐式转换，为了消除简写的类型转换
     'no-implicit-coercion': 0,
 
-    // 禁止不必要的布尔转换
-    'no-extra-boolean-cast': 0,
-
     // 禁止在全局作用域里声明变量或函数
     'no-implicit-globals': 2,
 
@@ -298,20 +287,11 @@ module.exports = {
     // 禁止使用不被修改的循环条件
     'no-unmodified-loop-condition': 2,
 
-    // 禁止在代码中出现没有被使用到的表达式或值
-    'no-unused-expressions': [2, {allowShortCircuit: true, allowTernary: true}],
-
     // 禁止在代码中出现没有被使用到的标签
     'no-unused-labels': 2,
 
     // 避免使用没有意义的call() 和 apply()
     'no-useless-call': 2,
-
-    // 避免使用不必要的字符串拼接
-    'no-useless-concat': 2,
-
-    // 不要使用void操作符
-    'no-void': 2,
 
     // 生产代码中不能出现warning-comments包含的注释
     'no-warning-comments': [
@@ -336,12 +316,8 @@ module.exports = {
     // 默认的规则要求，变量写在左边而字面量写在右边
     yoda: 2,
 
-    /*Strict Mode*/
 
-    // 使用严格模式
-    strict: 2,
-
-    /*Variables*/
+    /* Variables*/
 
     // 变量声明时必须赋初值
     'init-declarations': 0,
@@ -379,7 +355,7 @@ module.exports = {
     // 所有的变量都应该先定义后使用
     'no-use-before-define': 0,
 
-    /*Node.js and CommonJS*/
+    /* Node.js and CommonJS*/
     // 强制回调后return，避免多次调用回调
     'callback-return': 0,
 
@@ -410,7 +386,7 @@ module.exports = {
     // 禁止使用同步方法，建议使用异步方法
     'no-sync': 0,
 
-    /*Stylistic Issues*/
+    /* Stylistic Issues*/
 
     //  用数组字面量定义数组时数组元素前后是否加空格，
     //  never参数： 数组元素前后不能带空格，
@@ -449,15 +425,6 @@ module.exports = {
 
     // 要求给函数表达式命名，便于debug
     'func-names': 0,
-
-    // 在JavaScript中有两种方式定义函数:函数声明和函数表达式。
-    // 函数声明就是把function关键词写在最前面，后面跟一个函数名。我们可以在函数申明代码前调用函数
-    // 函数表达式是通过var等声明变量的关键字开头，然后跟函数名，再后面是function本身。在使用函数表达式定义函数前调用函数会报错
-    //  统一定义函数是所采用的方式，参数：
-    //     declaration: 强制使用方法声明的方式，function f(){} e.g [2, 'declaration']
-    //     expression：强制使用方法表达式的方式，默认方式，var f = function() {}  e.g [2, 'expression']
-    //     allowArrowFunctions: declaration风格中允许箭头函数。 e.g [2, 'declaration', {'allowArrowFunctions':true}]
-    'func-style': [2, 'expression'],
 
     // 规定了标识符命名的黑名单
     'id-blacklist': [0, 'data', 'err', 'e', 'cb', 'callback'],
@@ -608,10 +575,10 @@ module.exports = {
     // 尽管ASI允许我们使用更加自由的代码风格，但是它也可能使得你的代码并不是按你期许的方式运行
     // 两个可选参数，always 和never
     // 默认配置always，要求在行末加上分号。
-    semi: [0, 'always'],
+    semi: [2, 'never'],
 
     // 该规则用来规定分号前后是否加空格，默认配置如下
-    'semi-spacing': [2, {before: false, after: true}],
+    'semi-spacing': [1, {before: false, after: true}],
 
     // 要求对同一个模块里的import声明按字母排序
     'sort-imports': 0,
@@ -658,7 +625,7 @@ module.exports = {
     // 要求在正则表达式的双斜杠外面加一个圆括号，来消除歧义
     'wrap-regex': 0,
 
-    /*ECMAScript 6*/
+    /* ECMAScript 6*/
 
     'prefer-promise-reject-errors': 0,
 
@@ -772,4 +739,4 @@ module.exports = {
     // yield*表达式中的*号前后是否留空格，默认after，比如yield* other()
     'yield-star-spacing': [2, 'after'],
   },
-};
+}
