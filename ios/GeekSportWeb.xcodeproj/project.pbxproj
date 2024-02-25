@@ -12,9 +12,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3E08F5B158DC4415AA4EEC64 /* antfill.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A84510383C4D499CBDD9C580 /* antfill.ttf */; };
 		64FCAE8B421AD69B23585E55 /* libPods-GeekSportWeb-GeekSportWebTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0628156658157AFC9CB5AD02 /* libPods-GeekSportWeb-GeekSportWebTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		3E08F5B158DC4415AA4EEC64 /* antfill.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A84510383C4D499CBDD9C580 /* antfill.ttf */; };
 		F19202A09C784367A2A87590 /* antoutline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2188CDC2B038452D9A14FEE5 /* antoutline.ttf */; };
 /* End PBXBuildFile section */
 
@@ -40,14 +40,14 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GeekSportWeb/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GeekSportWeb/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GeekSportWeb/main.m; sourceTree = "<group>"; };
+		2188CDC2B038452D9A14FEE5 /* antoutline.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = antoutline.ttf; path = "../node_modules/@ant-design/icons-react-native/fonts/antoutline.ttf"; sourceTree = "<group>"; };
 		3D9E3948DF72C94D304204D8 /* libPods-GeekSportWeb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GeekSportWeb.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5C90A0F42BD9518AD9DBDE /* Pods-GeekSportWeb-GeekSportWebTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekSportWeb-GeekSportWebTests.release.xcconfig"; path = "Target Support Files/Pods-GeekSportWeb-GeekSportWebTests/Pods-GeekSportWeb-GeekSportWebTests.release.xcconfig"; sourceTree = "<group>"; };
 		672CE85C02F46E2DB11C917C /* Pods-GeekSportWeb-GeekSportWebTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekSportWeb-GeekSportWebTests.debug.xcconfig"; path = "Target Support Files/Pods-GeekSportWeb-GeekSportWebTests/Pods-GeekSportWeb-GeekSportWebTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GeekSportWeb/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A84510383C4D499CBDD9C580 /* antfill.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = antfill.ttf; path = "../node_modules/@ant-design/icons-react-native/fonts/antfill.ttf"; sourceTree = "<group>"; };
 		BD0C0006EDB0C0B076FBCBA3 /* Pods-GeekSportWeb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekSportWeb.debug.xcconfig"; path = "Target Support Files/Pods-GeekSportWeb/Pods-GeekSportWeb.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		A84510383C4D499CBDD9C580 /* antfill.ttf */ = {isa = PBXFileReference; name = "antfill.ttf"; path = "../node_modules/@ant-design/icons-react-native/fonts/antfill.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2188CDC2B038452D9A14FEE5 /* antoutline.ttf */ = {isa = PBXFileReference; name = "antoutline.ttf"; path = "../node_modules/@ant-design/icons-react-native/fonts/antoutline.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +110,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		42C026314221403885082B4E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A84510383C4D499CBDD9C580 /* antfill.ttf */,
+				2188CDC2B038452D9A14FEE5 /* antoutline.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,16 +162,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		42C026314221403885082B4E /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				A84510383C4D499CBDD9C580 /* antfill.ttf */,
-				2188CDC2B038452D9A14FEE5 /* antoutline.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 

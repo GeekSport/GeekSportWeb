@@ -5,99 +5,62 @@
  * @author Jed
  */
 
+import 'react-native-gesture-handler'
 import React from 'react'
-import type { PropsWithChildren } from 'react'
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native'
+import { Text as RNText } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { Iconfont } from './components/common/iconfont'
+import { Home}  from './pages/home'
+import  {Personal}  from './pages/personal'
 
-import { Colors } from 'react-native/Libraries/NewAppScreen'
-import { Button } from '@ant-design/react-native'
+const Tab = createBottomTabNavigator()
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({ children, title }: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark'
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-      <Button>Start</Button>
-    </View>
-  )
-}
-
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark'
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  }
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+function App() {
+    return (
+      <NavigationContainer>
+        <Tab.Navigator
+          initialRouteName="HomeScreen"
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: '#3f51b5',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
           }}>
-          <Section title="欢迎开发此APP">
-
-            新的开始！冲！ <Text style={styles.highlight}>你徐哥大制作</Text>
-          </Section>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  )
-}
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-})
+          <Tab.Screen
+            name="HomeScreen"
+            component={Home}
+            options={({ route, navigation }) => {
+              return {
+                tabBarLabel: ({ color }) => (
+                  <RNText style={{ color: color, fontSize: 12 }}>首页</RNText>
+                ),
+                tabBarIcon: ({ color }) => (
+                  <Iconfont name="Home" size={20} color={'#3f51b5'} />
+                ),
+              }
+            }}
+          />
+          <Tab.Screen
+            name="DetailScreen"
+            component={Personal}
+            options={({ route, navigation }) => {
+              return {
+                tabBarLabel: ({ color }) => (
+                  <RNText style={{ color: color, fontSize: 12 }}>个人</RNText>
+                ),
+                tabBarIcon: ({ color }) => (
+                  <Iconfont name="Personal" size={20} color={'#3f51b5'} />
+                ),
+              }
+            }}
+          />
+        </Tab.Navigator>
+      </NavigationContainer>
+    )
+  }
 
 export default App

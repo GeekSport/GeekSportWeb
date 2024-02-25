@@ -5,6 +5,7 @@ module.exports = {
   tabWidth: 2,
   preserve: 'preserve',
   useTabs: false,
+  trailingComma: "none",
   vueIndentScriptAndStyle: true,
 };
 

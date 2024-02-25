@@ -18,6 +18,7 @@ module.exports = {
         // 禁用代码长度检测
         preserve: 'preserve',
         useTabs: false,
+        trailingComma: "none",
         vueIndentScriptAndStyle: true,
       },
     ],
@@ -89,9 +90,6 @@ module.exports = {
 
     // 禁止在正则表达式字面量中使用多个空格 /foo bar/
     'no-regex-spaces': 2,
-
-    // 禁止稀疏数组，清除多余的逗号申明  比如[1,,2]
-    'no-sparse-arrays': 2,
 
     // 为了保证两行不相关的代码不会意外的被当做一行代码来解析
     'no-unexpected-multiline': 0,
@@ -278,9 +276,6 @@ module.exports = {
     // 禁止和自身作比较
     'no-self-compare': 2,
 
-    // 禁止可能导致结果不明确的逗号操作符
-    'no-sequences': 0,
-
     // 通过throw语句抛出的对象必须是Error对象本身或者通过Error对象定义的对象。有些情况除外，见官网
     'no-throw-literal': 2,
 
@@ -403,12 +398,6 @@ module.exports = {
 
     // 强制使用驼峰命名
     camelcase: 0,
-
-    // 规定了逗号前后的空白，默认配置规定逗号前面没有空白，而逗号后面需要留空白
-    'comma-spacing': [2, {before: false, after: true}],
-
-    // 规定了逗号放的位置，默认配置逗号应该放在行末，如果设置为first，逗号就应放在行首
-    'comma-style': [2, 'last'],
 
     // 是否在对象的动态属性（computed properties： ES6引入）中添加空白，默认配置不添加空白
     'computed-property-spacing': [2, 'never'],

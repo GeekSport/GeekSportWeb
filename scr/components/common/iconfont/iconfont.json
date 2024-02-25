@@ -1,0 +1,16 @@
+{
+  "id": "64825",
+  "name": "GeekSportWeb",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "供 App 使用",
+  "glyphs": [
+    {
+      "icon_id": "2478331",
+      "name": "Home",
+      "font_class": "Home",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    }
+  ]
+}
