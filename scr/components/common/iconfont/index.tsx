@@ -17,7 +17,6 @@ const iconMap: { [key: string]: string } = glyphs.reduce((map, icon) => {
 }, {})
 
 
-console.log(iconMap,'==--===')
 
 interface IconfontProps extends TextProps {
   name: string
@@ -27,7 +26,6 @@ interface IconfontProps extends TextProps {
 
 // eslint-disable-next-line no-undef
 export const Iconfont = observer((props: IconfontProps): JSX.Element => {
-  
   return (
     <RNText
       {...props}

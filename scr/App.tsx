@@ -38,6 +38,9 @@ function App() {
                 tabBarLabel: ({ color }) => (
                   <RNText style={{ color: color, fontSize: 12 }}>首页</RNText>
                 ),
+                tabBarIcon: ({ color }) => (
+                  <Iconfont name="Home" size={20} color={'#3f51b5'} />
+                ),
               }
             }}
           />
@@ -48,6 +51,9 @@ function App() {
               return {
                 tabBarLabel: ({ color }) => (
                   <RNText style={{ color: color, fontSize: 12 }}>个人</RNText>
+                ),
+                tabBarIcon: ({ color }) => (
+                  <Iconfont name="yduigerenzhongxin" size={20} color={'#3f51b5'} />
                 ),
               }
             }}
