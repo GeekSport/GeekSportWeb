@@ -2,11 +2,11 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "scr/assets/fonts/DIN-Regular.ttf",
+      "path": "src/assets/fonts/DIN-Regular.ttf",
       "sha1": "4dae1c0c4c83b39afa25add7f386426cc40e0c4e"
     },
     {
-      "path": "scr/assets/fonts/iconfont.ttf",
+      "path": "src/assets/fonts/iconfont.ttf",
       "sha1": "44d5454f952b93c6bd8f64c782de2beac3b3695b"
     }
   ]

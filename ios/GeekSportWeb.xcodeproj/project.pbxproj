@@ -12,14 +12,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		44433C36BD664051B51A20CE /* iconfont.json in Resources */ = {isa = PBXBuildFile; fileRef = 457A0BDCC1B24D70BABB4C6D /* iconfont.json */; };
-		59DE258191834F50833E4A40 /* iconfont.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7C73E4EF71F045489A422503 /* iconfont.woff2 */; };
-		5AE2764AB8F84C74A3E885E9 /* iconfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = A0D5D81758CD4DE08E465278 /* iconfont.woff */; };
 		64FCAE8B421AD69B23585E55 /* libPods-GeekSportWeb-GeekSportWebTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0628156658157AFC9CB5AD02 /* libPods-GeekSportWeb-GeekSportWebTests.a */; };
-		818101D7A08747388BCFF3F1 /* iconfont.js in Resources */ = {isa = PBXBuildFile; fileRef = B36F3E492C0945F69D9FF226 /* iconfont.js */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9F25CADFFAC9433C8E325B97 /* DIN-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1F67AFA6AC84E4FAC9BE80E /* DIN-Regular.ttf */; };
-		AB869822B6B84B80B407C43B /* iconfont.css in Resources */ = {isa = PBXBuildFile; fileRef = 1DEBC115533142E9ADBCF1F4 /* iconfont.css */; };
 		CA08C65B62D74044939BB20D /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78260CCB01FA434BB5D7E03B /* iconfont.ttf */; };
 /* End PBXBuildFile section */
 
@@ -621,7 +616,10 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -690,7 +688,10 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
