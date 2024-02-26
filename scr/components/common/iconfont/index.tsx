@@ -7,7 +7,6 @@
 import React from 'react'
 import { Text as RNText, TextProps } from 'react-native'
 import { observer } from 'mobx-react'
-import colors from '../../../style/colors'
 import { glyphs } from './iconfont.json'
 
 const iconMap: { [key: string]: string } = glyphs.reduce((map, icon) => {
@@ -18,6 +17,8 @@ const iconMap: { [key: string]: string } = glyphs.reduce((map, icon) => {
 }, {})
 
 
+console.log(iconMap,'==--===')
+
 interface IconfontProps extends TextProps {
   name: string
   color?: string
@@ -26,13 +27,14 @@ interface IconfontProps extends TextProps {
 
 // eslint-disable-next-line no-undef
 export const Iconfont = observer((props: IconfontProps): JSX.Element => {
+  
   return (
     <RNText
       {...props}
       style={[
         // eslint-disable-next-line react-native/no-inline-styles
         {
-          color: props.color || colors.textDefault,
+          color: props.color,
           fontFamily: 'iconfont',
         },
         !props.size ? null : {
@@ -42,7 +44,6 @@ export const Iconfont = observer((props: IconfontProps): JSX.Element => {
       ]}
     >
       {iconMap[props.name]}
-      
     </RNText>
   )
 })
