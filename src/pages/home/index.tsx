@@ -10,7 +10,7 @@ import { View, Text, Button } from 'react-native'
  function Home({ navigation }: { navigation: any }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>首页</Text>
+      <Text>首页测试</Text>
     </View>
   )
 }

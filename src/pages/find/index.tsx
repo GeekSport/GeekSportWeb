@@ -4,6 +4,7 @@
  * @module pages/find/index
  * @author Jed
  */
+
 import React from 'react'
 import { View, Text, Button } from 'react-native'
  function Find() {

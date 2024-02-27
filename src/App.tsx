@@ -11,10 +11,10 @@ import { Text as RNText } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Iconfont } from './components/common/iconfont'
-import { Home }  from './pages/home/index'
-import { Personal }  from './pages/personal/index'
-import { Find }  from './pages/find/index'
-import { Square }  from './pages/square/index'
+import { Home }  from '@app/pages/home'
+import { Personal }  from '@app/pages/personal'
+import { Find }  from '@app/pages/find'
+import { Square }  from '@app/pages/square'
 const Tab = createBottomTabNavigator()
 
 function App() {

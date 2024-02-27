@@ -5,8 +5,6 @@
  * @author Jed
  */
 
-/* components/Homescreen.js */
-
 import React from 'react'
 import { View, Text, Button } from 'react-native'
  function Square({ navigation }: { navigation: any }) {
