@@ -7,7 +7,6 @@
 
 import 'react-native-gesture-handler'
 import React from 'react'
-import { Text as RNText } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { TabBarIcon } from './components/common/tabbarIcon'
@@ -35,11 +34,12 @@ function App() {
         <Tab.Screen
           name="首页"
           component={Home}
-          options={{
-            tabBarLabel: ({ color }) => (
-              <RNText style={{ color: color, fontSize: 13 }}>首页</RNText>
-            ),
-            tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="Home" />,
+          // route, navigation 目前保留，之后会有用（非主页内容，需要去隐藏下面导航部分）
+          options={({ route, navigation }) => {
+            return {
+              tabBarLabel: () => null,
+              tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} iconNameDefault="Home" iconNameFocused="yduizhuyexuanzhong" label="首页" />,
+            }
           }}
         />
         <Tab.Screen
@@ -47,10 +47,8 @@ function App() {
           component={Square}
           options={({ route, navigation }) => {
             return {
-              tabBarLabel: ({ color }) => (
-                <RNText style={{ color: color, fontSize: 13 }}>广场</RNText>
-              ),
-              tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="rxa-heart-message-lined" />,
+              tabBarLabel: () => null,
+              tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} iconNameDefault="rxa-heart-message-lined" iconNameFocused="rxa-heart-message-filled" label="广场" />,
             }
           }}
         />
@@ -59,10 +57,8 @@ function App() {
           component={Find}
           options={({ route, navigation }) => {
             return {
-              tabBarLabel: ({ color }) => (
-                <RNText style={{ color: color, fontSize: 13 }}>发现</RNText>
-              ),
-              tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="faxian" />,
+              tabBarLabel: () => null,
+              tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} iconNameDefault="faxian" iconNameFocused="faxian1-copy" label="发现" />,
             }
           }}
         />
@@ -71,10 +67,8 @@ function App() {
           component={Personal}
           options={({ route, navigation }) => {
             return {
-              tabBarLabel: ({ color }) => (
-                <RNText style={{ color: color, fontSize: 13 }}>个人</RNText>
-              ),
-              tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="yduigerenzhongxin" />,
+              tabBarLabel: () => null,
+              tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} iconNameDefault="yduigerenzhongxin" iconNameFocused="yduigerenzhongxinxuanzhong" label="个人" />,
             }
           }}
         />
