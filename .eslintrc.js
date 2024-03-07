@@ -457,9 +457,6 @@ module.exports = {
     // 规定了函数中代码不能够超过多少行
     'max-statements': [0, 10],
 
-    // 使用构造函数(new)时首字母需大写，首字母大写的函数需用new操作符
-    'new-cap': 2,
-
     // 使用构造函数(new)时必须圆括号不能省略
     'new-parens': 0,
 
