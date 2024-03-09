@@ -12,10 +12,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3031399E2B9C15930072E204 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3031399C2B9C15930072E204 /* iconfont.ttf */; };
+		3031399F2B9C15930072E204 /* DIN-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3031399D2B9C15930072E204 /* DIN-Regular.ttf */; };
+		305227EF2B9C676000540500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305227EE2B9C676000540500 /* LaunchScreen.storyboard */; };
 		64FCAE8B421AD69B23585E55 /* libPods-GeekSportWeb-GeekSportWebTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0628156658157AFC9CB5AD02 /* libPods-GeekSportWeb-GeekSportWebTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		9F25CADFFAC9433C8E325B97 /* DIN-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1F67AFA6AC84E4FAC9BE80E /* DIN-Regular.ttf */; };
-		CA08C65B62D74044939BB20D /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78260CCB01FA434BB5D7E03B /* iconfont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,17 +40,12 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GeekSportWeb/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GeekSportWeb/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GeekSportWeb/main.m; sourceTree = "<group>"; };
-		1DEBC115533142E9ADBCF1F4 /* iconfont.css */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = iconfont.css; path = ../scr/assets/fonts/iconfont.css; sourceTree = "<group>"; };
+		3031399C2B9C15930072E204 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = iconfont.ttf; path = ../src/assets/fonts/iconfont.ttf; sourceTree = "<group>"; };
+		3031399D2B9C15930072E204 /* DIN-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DIN-Regular.ttf"; path = "../src/assets/fonts/DIN-Regular.ttf"; sourceTree = "<group>"; };
+		305227EE2B9C676000540500 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D9E3948DF72C94D304204D8 /* libPods-GeekSportWeb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GeekSportWeb.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		457A0BDCC1B24D70BABB4C6D /* iconfont.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = iconfont.json; path = ../scr/assets/fonts/iconfont.json; sourceTree = "<group>"; };
 		5E5C90A0F42BD9518AD9DBDE /* Pods-GeekSportWeb-GeekSportWebTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekSportWeb-GeekSportWebTests.release.xcconfig"; path = "Target Support Files/Pods-GeekSportWeb-GeekSportWebTests/Pods-GeekSportWeb-GeekSportWebTests.release.xcconfig"; sourceTree = "<group>"; };
 		672CE85C02F46E2DB11C917C /* Pods-GeekSportWeb-GeekSportWebTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekSportWeb-GeekSportWebTests.debug.xcconfig"; path = "Target Support Files/Pods-GeekSportWeb-GeekSportWebTests/Pods-GeekSportWeb-GeekSportWebTests.debug.xcconfig"; sourceTree = "<group>"; };
-		78260CCB01FA434BB5D7E03B /* iconfont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = iconfont.ttf; path = ../scr/assets/fonts/iconfont.ttf; sourceTree = "<group>"; };
-		7C73E4EF71F045489A422503 /* iconfont.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = iconfont.woff2; path = ../scr/assets/fonts/iconfont.woff2; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GeekSportWeb/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A0D5D81758CD4DE08E465278 /* iconfont.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = iconfont.woff; path = ../scr/assets/fonts/iconfont.woff; sourceTree = "<group>"; };
-		B1F67AFA6AC84E4FAC9BE80E /* DIN-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DIN-Regular.ttf"; path = "../scr/assets/fonts/DIN-Regular.ttf"; sourceTree = "<group>"; };
-		B36F3E492C0945F69D9FF226 /* iconfont.js */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = iconfont.js; path = ../scr/assets/fonts/iconfont.js; sourceTree = "<group>"; };
 		BD0C0006EDB0C0B076FBCBA3 /* Pods-GeekSportWeb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekSportWeb.debug.xcconfig"; path = "Target Support Files/Pods-GeekSportWeb/Pods-GeekSportWeb.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -95,12 +90,14 @@
 		13B07FAE1A68108700A75B9A /* GeekSportWeb */ = {
 			isa = PBXGroup;
 			children = (
+				3031399D2B9C15930072E204 /* DIN-Regular.ttf */,
+				3031399C2B9C15930072E204 /* iconfont.ttf */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				305227EE2B9C676000540500 /* LaunchScreen.storyboard */,
 			);
 			name = GeekSportWeb;
 			sourceTree = "<group>";
@@ -118,13 +115,6 @@
 		42C026314221403885082B4E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B1F67AFA6AC84E4FAC9BE80E /* DIN-Regular.ttf */,
-				78260CCB01FA434BB5D7E03B /* iconfont.ttf */,
-				1DEBC115533142E9ADBCF1F4 /* iconfont.css */,
-				B36F3E492C0945F69D9FF226 /* iconfont.js */,
-				457A0BDCC1B24D70BABB4C6D /* iconfont.json */,
-				A0D5D81758CD4DE08E465278 /* iconfont.woff */,
-				7C73E4EF71F045489A422503 /* iconfont.woff2 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -266,10 +256,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				3031399F2B9C15930072E204 /* DIN-Regular.ttf in Resources */,
+				305227EF2B9C676000540500 /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				9F25CADFFAC9433C8E325B97 /* DIN-Regular.ttf in Resources */,
-				CA08C65B62D74044939BB20D /* iconfont.ttf in Resources */,
+				3031399E2B9C15930072E204 /* iconfont.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,10 +606,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -688,10 +675,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

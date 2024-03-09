@@ -10,7 +10,7 @@
     "start": "react-native start",
     "all": "yarn ios && yarn android",
     "android": "react-native run-android",
-    "ios": "react-native run-ios --simulator=iPhone 15 ",
+    "ios": "react-native run-ios --simulator=iPhone 15",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "postversion": "react-native-version",
     "postinstall": "patch-package",
@@ -40,7 +40,9 @@
     "react-native-pose": "^0.9.1",
     "react-native-safe-area-context": "^4.9.0",
     "react-native-screens": "^3.29.0",
-    "react-native-svg": "^14.1.0"
+    "react-native-splash-screen": "^3.3.0",
+    "react-native-svg": "^14.1.0",
+    "react-native-vector-icons": "^10.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

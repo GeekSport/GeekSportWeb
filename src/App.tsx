@@ -6,7 +6,8 @@
  */
 
 import 'react-native-gesture-handler'
-import React from 'react'
+import React, { useEffect } from 'react'
+import SplashScreen from 'react-native-splash-screen'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { TabBarIcon } from './components/common/tabbarIcon'
@@ -18,6 +19,11 @@ import { Square } from '@app/pages/square'
 const Tab = createBottomTabNavigator()
 
 function App() {
+  
+  useEffect(() => {
+    SplashScreen.hide()
+  }, [])
+  
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -37,6 +43,7 @@ function App() {
           // route, navigation 目前保留，之后会有用（非主页内容，需要去隐藏下面导航部分）
           options={({ route, navigation }) => {
             return {
+              headerShown: false,
               tabBarLabel: () => null,
               tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} iconNameDefault="Home" iconNameFocused="yduizhuyexuanzhong" label="首页" />,
             }

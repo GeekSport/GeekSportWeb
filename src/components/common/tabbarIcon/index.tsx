@@ -10,8 +10,8 @@ import { Text as RNText, View, StyleSheet } from 'react-native'
 import { Iconfont } from '@app/components/common/iconfont'
 
 const Scaler = posed.View({
-  active: { scale: 0.9 },
-  inactive: { scale: 0.8 },
+  active: { scale: 1 },
+  inactive: { scale: 0.9 },
 })
 
 const styles = StyleSheet.create({
@@ -19,10 +19,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   icon: {
-    marginTop: 4,
+    marginTop: 0,
   },
   label: {
-    marginTop: 5,
+    marginTop: 0,
   },
 })
 
@@ -31,8 +31,8 @@ export const TabBarIcon = ({ focused, iconNameDefault, iconNameFocused, label }:
   return (
     <Scaler pose={focused ? 'active' : 'inactive'}>
       <View style={styles.container}>
-        <Iconfont style={styles.icon} name={iconName} size={25} color={focused ? '#3f51b5' : '#ccc'} />
-        <RNText style={[styles.label, { color: focused ? '#3f51b5' : '#ccc', fontSize: 14 }]}>{label}</RNText>
+        <Iconfont style={styles.icon} name={iconName} size={22} color={focused ? '#00B96B' : '#ccc'} />
+        <RNText style={[styles.label, { color: focused ? '#00B96B' : '#ccc', fontSize: 13 }]}>{label}</RNText>
       </View>
     </Scaler>
   )
