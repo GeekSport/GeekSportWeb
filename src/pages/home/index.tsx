@@ -6,11 +6,11 @@
  */
 
 import React from 'react'
-import { View, Text, Button } from 'react-native'
+import { View, Text } from 'react-native'
  function Home({ navigation }: { navigation: any }) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>首页测试</Text>
+    <View className="flex-1 items-center justify-center" >
+      <Text  className="text-amber-500 text-xl">首1页22测试</Text>
     </View>
   )
 }

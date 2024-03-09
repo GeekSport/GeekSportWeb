@@ -1,12 +1,11 @@
 /**
  * Login
- * @file  登录组件
+ * @file  登录/注册组件
  * @module app/components/common/login
  */
 
 import React, { useState } from 'react'
 import { View, TextInput, Button, Image, StyleSheet } from 'react-native'
-import logo from '../../../assets/images/gravatar.png'
 
 export const Login = () => {
   const [phoneNumber, setPhoneNumber] = useState('')
@@ -22,7 +21,6 @@ export const Login = () => {
 
   return (
     <View style={styles.container}>
-      <Image source={logo} style={styles.logo} />
       <TextInput
         style={styles.input}
         placeholder="手机号"
