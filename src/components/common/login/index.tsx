@@ -7,7 +7,8 @@
 import React, { useState } from 'react'
 import { View, TextInput, Button, Image, StyleSheet } from 'react-native'
 
-export const Login = () => {
+
+export const Login = ({ route, navigation }: { route: any, navigation: any }) => {
   const [phoneNumber, setPhoneNumber] = useState('')
   const [verificationCode, setVerificationCode] = useState('')
 
@@ -15,9 +16,14 @@ export const Login = () => {
     // 在这里发送验证码
   }
 
-  const login = () => {
-    // 在这里处理登录逻辑
-  }
+  const handleLogin = () => {
+    // 登陆成功之后的逻辑
+    navigation.reset({
+      index: 1,
+      routes: [{ name: 'TabNavigator' }],
+    });
+  };
+
 
   return (
     <View style={styles.container}>
@@ -36,7 +42,7 @@ export const Login = () => {
         />
         <Button title="发送验证码" onPress={sendVerificationCode} />
       </View>
-      <Button title="登录" onPress={login} />
+      <Button title="登录"  onPress={handleLogin} />
     </View>
   )
 }
@@ -68,3 +74,4 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 })
+
