@@ -1,7 +1,7 @@
 /**
  * Navigation animation
  * @file 导航动画
- * @module app/components/common/tabbarIcon
+ * @module app/components/common/TabBarIcon
  */
 
 import posed from 'react-native-pose'

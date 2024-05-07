@@ -16,21 +16,17 @@ const iconMap: { [key: string]: string } = glyphs.reduce((map, icon) => {
   }
 }, {})
 
-
-
 interface IconfontProps extends TextProps {
   name: string
   color?: string
   size?: number
 }
 
-// eslint-disable-next-line no-undef
 export const Iconfont = observer((props: IconfontProps): JSX.Element => {
   return (
     <RNText
       {...props}
       style={[
-        // eslint-disable-next-line react-native/no-inline-styles
         {
           color: props.color,
           fontFamily: 'iconfont',

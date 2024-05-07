@@ -1,11 +1,11 @@
 /**
  * Login
  * @file  登录/注册组件
- * @module app/components/common/login
+ * @module app/components/common/Login
  */
 
 import React, { useState } from 'react'
-import { View, TextInput, Button, Image, StyleSheet } from 'react-native'
+import { View, TextInput, Button, StyleSheet } from 'react-native'
 
 
 export const Login = ({ route, navigation }: { route: any, navigation: any }) => {

@@ -13,7 +13,6 @@ import { Personal } from '@app/pages/personal'
 import { Find } from '@app/pages/find'
 import { Square } from '@app/pages/square'
 import { TabBarIcon } from '../TabBarIcon'
-import { Login } from '../Login'
 
 
 const Tab = createBottomTabNavigator();
