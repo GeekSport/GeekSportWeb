@@ -5,7 +5,8 @@
  */
 
 import React, { useState } from 'react'
-import { View, TextInput, Button, StyleSheet } from 'react-native'
+import { TextInput, StyleSheet } from 'react-native'
+import { Button, TamaguiProvider, View } from 'tamagui'
 
 
 export const Login = ({ route, navigation }: { route: any, navigation: any }) => {
@@ -36,13 +37,15 @@ export const Login = ({ route, navigation }: { route: any, navigation: any }) =>
       <View style={styles.verificationContainer}>
         <TextInput
           style={styles.input}
-          placeholder="验证码"
+          placeholder="验1证码"
           value={verificationCode}
           onChangeText={setVerificationCode}
         />
-        <Button title="发送验证码" onPress={sendVerificationCode} />
+        <Button onPress={sendVerificationCode}>不错</Button>
       </View>
-      <Button title="登录"  onPress={handleLogin} />
+      <TamaguiProvider>
+        <Button className='bg-teal-500' onPress={handleLogin}>登陆</Button>
+      </TamaguiProvider>
     </View>
   )
 }

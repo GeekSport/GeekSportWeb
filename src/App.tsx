@@ -7,6 +7,8 @@
 
 import 'react-native-gesture-handler'
 import React, { useEffect } from 'react'
+import { TamaguiProvider } from 'tamagui'
+import tamaguiConfig from '../tamagui.config'
 import SplashScreen from 'react-native-splash-screen'
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native'
@@ -22,6 +24,7 @@ function App() {
   }, []);
 
   return (
+    <TamaguiProvider config={tamaguiConfig}>
     <NavigationContainer>
     <Stack.Navigator >
     <Stack.Screen name="Login" component={Login}   options={({ navigation }) => ({
@@ -34,6 +37,7 @@ function App() {
           })} />
     </Stack.Navigator>
   </NavigationContainer>
+  </TamaguiProvider>
   )
 }
 
