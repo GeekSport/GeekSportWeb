@@ -5,9 +5,9 @@
  */
 
 import React, { useState } from 'react'
-import { TextInput, StyleSheet } from 'react-native'
-import { Button, TamaguiProvider, View } from 'tamagui'
-
+import { TextInput, StyleSheet, Text } from 'react-native'
+import { Button, View, Theme, Square } from 'tamagui'
+import colors from '@app/style/colors'
 
 export const Login = ({ route, navigation }: { route: any, navigation: any }) => {
   const [phoneNumber, setPhoneNumber] = useState('')
@@ -37,15 +37,13 @@ export const Login = ({ route, navigation }: { route: any, navigation: any }) =>
       <View style={styles.verificationContainer}>
         <TextInput
           style={styles.input}
-          placeholder="验1证码"
+          placeholder="验证码"
           value={verificationCode}
           onChangeText={setVerificationCode}
         />
-        <Button onPress={sendVerificationCode}>不错</Button>
+        <Button onPress={sendVerificationCode}>不11错</Button>
       </View>
-      <TamaguiProvider>
-        <Button className='bg-teal-500' onPress={handleLogin}>登陆</Button>
-      </TamaguiProvider>
+        <Button style={styles.text}  onPress={handleLogin}>登1陆11</Button>
     </View>
   )
 }
@@ -61,7 +59,14 @@ const styles = StyleSheet.create({
     height: 100,
     marginBottom: 50,
   },
+  text: {
+    backgroundColor: colors.primary,
+    borderColor: colors.primary,
+    fontSize: 20,
+    marginBottom: 20,
+  },
   input: {
+    color: colors.textDefault,
     height: 40,
     borderColor: 'gray',
     borderWidth: 1,
