@@ -24,20 +24,20 @@ function App() {
   }, []);
 
   return (
-    <TamaguiProvider config={config2}>
-    <NavigationContainer>
-    <Stack.Navigator >
-    <Stack.Screen name="Login" component={Login}   options={({ navigation }) => ({
-            headerShown: false,
-            animationEnabled: false,
-          })}/>
-      <Stack.Screen name="TabNavigator" component={TabNavigator} options={({ navigation }) => ({
-            headerShown: false,
-            animationEnabled: false,
-          })} />
-    </Stack.Navigator>
-  </NavigationContainer>
-  </TamaguiProvider>
+      <TamaguiProvider config={config2}>
+        <NavigationContainer>
+          <Stack.Navigator >
+            <Stack.Screen name="Login" component={Login} options={({ navigation }) => ({
+              headerShown: false,
+              animationEnabled: false,
+            })} />
+            <Stack.Screen name="TabNavigator" component={TabNavigator} options={({ navigation }) => ({
+              headerShown: false,
+              animationEnabled: false,
+            })} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </TamaguiProvider>
   )
 }
 

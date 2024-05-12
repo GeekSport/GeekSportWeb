@@ -13,6 +13,7 @@ import { Personal } from '@app/pages/personal'
 import { Find } from '@app/pages/find'
 import { Square } from '@app/pages/square'
 import { TabBarIcon } from '../TabBarIcon'
+import { HomeRoutes } from '@app/constants/routes'
 
 
 const Tab = createBottomTabNavigator();
@@ -35,7 +36,7 @@ function TabNavigator() {
       },
     }}>
     <Tab.Screen
-      name="Home"
+      name={HomeRoutes.Home}
       component={Home}
       options={({ route, navigation }) => {
         return {
@@ -46,7 +47,7 @@ function TabNavigator() {
       }}
     />
     <Tab.Screen
-      name="广场"
+      name={HomeRoutes.Square}
       component={Square}
       options={({ route, navigation }) => {
         return {
@@ -56,7 +57,7 @@ function TabNavigator() {
       }}
     />
     <Tab.Screen
-      name="发现"
+      name={HomeRoutes.Find}
       component={Find}
       options={({ route, navigation }) => {
         return {
@@ -66,7 +67,7 @@ function TabNavigator() {
       }}
     />
     <Tab.Screen
-      name="个人"
+      name={HomeRoutes.Personal}
       component={Personal}
       options={({ route, navigation }) => {
         return {

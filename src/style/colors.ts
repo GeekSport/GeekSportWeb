@@ -6,7 +6,7 @@
  */
 
 import { observable } from 'mobx'
-import { Appearance } from 'react-native-appearance'
+import { Appearance } from 'react-native';
 
 export enum Themes {
   Default = 'default',
@@ -79,7 +79,10 @@ export const Dark: Theme = {
   textLink: '#FFFFFF'
 }
 
-export const isDarkSystemTheme =  'dark'
+const themeMode = Appearance.getColorScheme();
+
+export const isDarkSystemTheme =  themeMode === 'dark'
+
 const colors = observable<Theme>(isDarkSystemTheme ? Dark : Default)
 
 export default colors

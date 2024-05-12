@@ -5,9 +5,8 @@
  */
 
 import React, { useState } from 'react'
-import { TextInput, StyleSheet, Text } from 'react-native'
-import { Button, View, Theme, Square } from 'tamagui'
-import colors from '@app/style/colors'
+import { TextInput, StyleSheet } from 'react-native'
+import { Button, View  } from 'tamagui'
 
 export const Login = ({ route, navigation }: { route: any, navigation: any }) => {
   const [phoneNumber, setPhoneNumber] = useState('')
@@ -60,13 +59,10 @@ const styles = StyleSheet.create({
     marginBottom: 50,
   },
   text: {
-    backgroundColor: colors.primary,
-    borderColor: colors.primary,
     fontSize: 20,
     marginBottom: 20,
   },
   input: {
-    color: colors.textDefault,
     height: 40,
     borderColor: 'gray',
     borderWidth: 1,
