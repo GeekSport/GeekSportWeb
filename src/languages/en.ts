@@ -12,9 +12,9 @@ export default {
   [LANGUAGE_KEYS.CHINESE]: 'Chinese, Simplified',
 
   [LANGUAGE_KEYS.HOME]: 'Home',
-  [LANGUAGE_KEYS.ARTICLE_DETAIL]: 'Aericle Detail',
-  [LANGUAGE_KEYS.GUESTBOOK]: 'Guestbook',
-  [LANGUAGE_KEYS.ABOUT]: 'Me',
+  [LANGUAGE_KEYS.SQUARE]: 'Square',
+  [LANGUAGE_KEYS.FIND]: 'Find',
+  [LANGUAGE_KEYS.PERSONAL]: 'Personal',
   
   [LANGUAGE_KEYS.ARTICLE]: 'Article',
   [LANGUAGE_KEYS.ARTICLES]: 'Articles',
@@ -24,18 +24,6 @@ export default {
   [LANGUAGE_KEYS.CATEGORIES]: 'Categories',
   [LANGUAGE_KEYS.COMMENT]: 'Comment',
   [LANGUAGE_KEYS.COMMENTS]: 'comments',
-
-  [LANGUAGE_KEYS.LIKE]: 'Like',
-  [LANGUAGE_KEYS.SHARE]: 'Share',
-  [LANGUAGE_KEYS.TOTAL]: 'Total',
-  [LANGUAGE_KEYS.EMPTY]: 'Empty',
-  [LANGUAGE_KEYS.VIEWS]: 'views',
-  [LANGUAGE_KEYS.LIKES]: 'likes',
-  [LANGUAGE_KEYS.TODAY_VIEWS]: 'Today Views',
-  [LANGUAGE_KEYS.CREATE_AT]: 'Created at',
-  [LANGUAGE_KEYS.LAST_UPDATE_AT]: 'Last updated at',
-  [LANGUAGE_KEYS.RELATED_ARTICLE]: 'Related articles',
-  [LANGUAGE_KEYS.GUESTBOOK_SLOGAN]: 'You have come a long way',
 
   [LANGUAGE_KEYS.KEYWORD]: 'Keyword',
   [LANGUAGE_KEYS.SEARCH]: 'Search',
@@ -56,20 +44,11 @@ export default {
   [LANGUAGE_KEYS.OPEN_BY_BROWER]: 'By Brower',
   [LANGUAGE_KEYS.COPY_URL]: 'Cpoy url',
   
-  [LANGUAGE_KEYS.ORIGIN_HYBRID]: 'Hybrid',
-  [LANGUAGE_KEYS.ORIGIN_ORIGINAL]: 'Original',
-  [LANGUAGE_KEYS.ORIGIN_REPRINT]: 'Reprint',
-  [LANGUAGE_KEYS.AM]: 'AM',
-  [LANGUAGE_KEYS.PM]: 'PM',
-
   [LANGUAGE_KEYS.GITHUB]: 'GitHub',
   [LANGUAGE_KEYS.VLOG]: 'Vlog',
   [LANGUAGE_KEYS.EMAIL_ME]: 'Email Me',
   [LANGUAGE_KEYS.SPONSOR]: 'Sponsor Me',
   
-  [LANGUAGE_KEYS.TWITTER]: 'Twitter',
-  [LANGUAGE_KEYS.LINKEDIN]: 'LinkedIn',
-
   [LANGUAGE_KEYS.SETTING]: 'Setting',
   [LANGUAGE_KEYS.CLEAR_CACHE]: 'Clear cache',
   [LANGUAGE_KEYS.SWITCH_LANGUAGE]: 'Language',

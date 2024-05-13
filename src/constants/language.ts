@@ -15,9 +15,9 @@ export enum LANGUAGE_KEYS {
   CHINESE = 'chinese',
 
   HOME = 'home',
-  ARTICLE_DETAIL = 'articleDetail',
-  GUESTBOOK = 'guestbook',
-  ABOUT = 'about',
+  FIND = "Find",
+  SQUARE = "Square",
+  PERSONAL = "Personal",
 
   ARTICLE = 'article',
   ARTICLES = 'articles',
@@ -27,18 +27,6 @@ export enum LANGUAGE_KEYS {
   CATEGORIES = 'categories',
   COMMENT = 'comment',
   COMMENTS = 'comments',
-
-  VIEWS = 'views',
-  LIKES = 'likes',
-  LIKE = 'like',
-  SHARE = 'share',
-  TOTAL = 'total',
-  EMPTY = 'empty',
-  TODAY_VIEWS = 'todayViews',
-  CREATE_AT = 'createAt',
-  LAST_UPDATE_AT = 'lastUpdateAt',
-  RELATED_ARTICLE = 'relatedArticle',
-  GUESTBOOK_SLOGAN = 'guestbookSlogan',
 
   KEYWORD = 'keyword',
   SEARCH = 'search',
@@ -59,26 +47,17 @@ export enum LANGUAGE_KEYS {
   OPEN_BY_BROWER = 'openByBrower',
   COPY_URL = 'copyUrl',
 
-  ORIGIN_HYBRID = 'originHybrid',
-  ORIGIN_ORIGINAL = 'originOriginal',
-  ORIGIN_REPRINT = 'originReprint',
-  AM = 'am',
-  PM = 'pm',
-
   GITHUB = 'github',
   VLOG = 'vlog',
   EMAIL_ME = 'emailMe',
   SPONSOR = 'sponsor',
 
-  TWITTER = 'twitter',
-  LINKEDIN = 'linkedin',
-
   SETTING = 'setting',
+  CLEAR_CACHE = 'clearCache',
   DARK_THEME = 'darkTheme',
   SWITCH_LANGUAGE = 'switchLanguage',
   OPEN_SOURCE = 'openSource',
 
-  CLEAR_CACHE = 'clearCache',
   CLEAR_CACHE_TEXT = 'clearCacheText',
 
   OK = 'clearCacheOkButton',
@@ -90,5 +69,4 @@ export enum LANGUAGE_KEYS {
   CALL_EMAIL_ERROR = 'callEmailError',
 
   COMMENT_REPLY = 'commentReply',
-  CHANGE_LANGUAGE = "CHANGE_LANGUAGE",
 }
