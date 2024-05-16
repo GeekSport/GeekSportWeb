@@ -5,8 +5,11 @@
  */
 
 import React, { useState } from 'react'
-import { TextInput, StyleSheet } from 'react-native'
-import { Button, View  } from 'tamagui'
+import { TextInput, StyleSheet, Image, Text } from 'react-native'
+import { Button, View } from 'tamagui'
+import fonts from '@app/style/fonts'
+import sizes from '@app/style/sizes'
+import mixins from '@app/style/mixins'
 
 export const Login = ({ route, navigation }: { route: any, navigation: any }) => {
   const [phoneNumber, setPhoneNumber] = useState('')
@@ -27,55 +30,96 @@ export const Login = ({ route, navigation }: { route: any, navigation: any }) =>
 
   return (
     <View style={styles.container}>
-      <TextInput
-        style={styles.input}
-        placeholder="手机号"
-        value={phoneNumber}
-        onChangeText={setPhoneNumber}
-      />
-      <View style={styles.verificationContainer}>
+      <Image source={require('@app/assets/images/geekSport.png')} style={styles.logo} />
+      <Text style={styles.loginText}>登录体验更多精彩</Text>
+      <Text style={styles.register}>未注册手机验证后自动注册</Text>
+      <View style={styles.inputWrapper}>
+        <Text style={styles.verification}>+ 86 </Text>
+        <View style={styles.line} />
         <TextInput
           style={styles.input}
-          placeholder="验证码"
+          placeholder="请输入手机号"
+          value={phoneNumber}
+          placeholderTextColor="#999"
+          onChangeText={setPhoneNumber}
+        />
+      </View>
+      <View style={styles.inputWrapper}>
+        <Text style={styles.verification}>验证码</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="请输入验证码"
           value={verificationCode}
+          placeholderTextColor="#999"
           onChangeText={setVerificationCode}
         />
-        <Button onPress={sendVerificationCode}>不11错</Button>
+        <Text style={styles.obtain} onPress={sendVerificationCode}>获取验证码</Text>
       </View>
-        <Button style={styles.text}  onPress={handleLogin}>登1陆11</Button>
+      <Button style={styles.button} onPress={handleLogin}>登录</Button>
     </View>
   )
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    ...mixins.colCenter,
+    paddingHorizontal: sizes.gap,
   },
   logo: {
-    width: 100,
-    height: 100,
-    marginBottom: 50,
+    width: 80,
+    height: 80,
+    borderRadius: sizes.gap - 2,
+    resizeMode: 'cover',
   },
-  text: {
-    fontSize: 20,
-    marginBottom: 20,
+  loginText: {
+    color: '#000000',
+    fontSize: fonts.h2.fontSize,
+    letterSpacing: 2,
+    marginTop: sizes.gap * 0.85,
+    marginBottom: sizes.gap * 0.75,
+  },
+  register: {
+    color: '#636365',
+    fontSize: sizes.goldenRatio * 20,
+    letterSpacing: 0.1,
+    marginTop: 0,
+    marginBottom: sizes.gap * 2,
+  },
+  button: {
+    fontSize: sizes.gap * 1,
+    marginTop: sizes.gap * 2,
+  },
+  inputWrapper: {
+    ...mixins.rowCenter,
+    width: sizes.screen.width * 0.8,
+    marginBottom: sizes.gap,
+  },
+  verification: {
+    position: 'absolute',
+    fontSize: sizes.gap * 0.9,
+    color: '#000',
+  },
+  line: {
+    position: 'absolute',
+    backgroundColor: '#B8B4B4',
+    width: 1,
+    marginLeft: sizes.gap * 2.75,
+    height: sizes.gap * 1.1,
   },
   input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    width: '80%',
-    marginBottom: 10,
-    paddingLeft: 10,
+    height: sizes.gap * 3,
+    paddingLeft: sizes.gap * 3.6,
+    fontSize: sizes.gap * 0.9,
+    borderBottomWidth: 1,
+    borderBottomColor: '#C9CACD',
+    width: '100%',
   },
-  verificationContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: '80%',
-    marginBottom: 20,
+  obtain: {
+    position: 'absolute',
+    fontSize: sizes.gap * 0.9,
+    right: sizes.gap * 0.5,
+    color: '#1E90FF',
   },
 })
-

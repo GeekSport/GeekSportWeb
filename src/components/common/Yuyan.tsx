@@ -8,7 +8,6 @@ import { LANGUAGE_KEYS } from '@app/constants/language'
 
 const languages = ['en', 'zh'] as TLanguage[]
 
-// 使用observer包裹组件
 export const Setting = observer(() => {
   const [currentLanguage, setCurrentLanguage] = useState<TLanguage>('en')
 

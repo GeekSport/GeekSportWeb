@@ -14,7 +14,6 @@ import { Setting } from '../../components/common/Yuyan';
 import { observer } from 'mobx-react';
 import { optionStore } from '@app/stores/option';
 
-// 将observer移到函数组件外部
 export const Home = observer(function Home({ navigation }: { navigation: any }) {
   const { language } = optionStore;
 
