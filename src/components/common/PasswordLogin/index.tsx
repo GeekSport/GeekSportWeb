@@ -1,54 +1,39 @@
 /**
  * Login
- * @file  登录/注册组件
+ * @file  密码登陆组件
  * @module app/components/common/Login
  */
 
-import React, { useState, useEffect, useCallback } from 'react';
-import { Keyboard, TextInput, StyleSheet, Image, Text, Alert, TouchableOpacity, TouchableWithoutFeedback} from 'react-native';
+import React, { useState, useCallback } from 'react';
+import { Keyboard, TextInput, Image, Text, Alert, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
 import { Check as CheckIcon } from '@tamagui/lucide-icons';
 import { Button, View, Checkbox } from 'tamagui';
+import { obStyles } from "@app/style/common/login"
 import { useFocusEffect } from '@react-navigation/native';
-import { obStyles  } from "@app/style/common/login"
-
 
 type Props = {
   route: any;
   navigation: any;
 };
 
-const validatePhoneNumber = (phoneNumber: string) => {
-  const phoneRegex = /^1[3-9]\d{9}$/;
-  return phoneRegex.test(phoneNumber);
-};
-
-export const Login = ({ route, navigation }: Props) => {
+export const PasswordLogin = ({ route, navigation }: Props) => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [verificationCode, setVerificationCode] = useState('');
   const [isSelected, setSelection] = useState(false);
-  const [timer, setTimer] = useState(0);
-  const [intervalId, setIntervalId] = useState<number | null>(null);
 
   const isButtonEnabled = phoneNumber.trim() !== '' && verificationCode.trim() !== '' && isSelected;
-  const isObtainDisabled = timer > 0;
 
   const { styles } = obStyles
 
   useFocusEffect(
     useCallback(() => {
-      // 屏幕聚焦时重置phoneNumber、verificationCode和计时器状态
       setPhoneNumber('');
       setVerificationCode('');
-      setTimer(0);
 
-      return () => {
-        // 当组件未聚焦时，清除计时器间隔
-        if (intervalId) {
-          clearInterval(intervalId);
-        }
-      };
+      return () => { };
     }, [])
   );
+
 
   const handleLogin = () => {
     if (isButtonEnabled) {
@@ -60,49 +45,12 @@ export const Login = ({ route, navigation }: Props) => {
   };
 
   const handleRegister = () => {
-    navigation.navigate('PasswordLogin');
+    navigation.navigate('Login');
   };
 
-  const startCountdown = useCallback(() => {
-    if (intervalId) {
-      clearInterval(intervalId);
-    }
-
-    setTimer(60);
-    const newIntervalId = setInterval(() => {
-      setTimer(prevTimer => {
-        if (prevTimer <= 1) {
-          clearInterval(newIntervalId);
-          return 0;
-        }
-        return prevTimer - 1;
-      });
-    }, 1000);
-    // @ts-ignore
-    setIntervalId(newIntervalId);
-  }, [intervalId]);
-
-  const onAgreementChange = useCallback(() => {
-    if (!validatePhoneNumber(phoneNumber)) {
-      Alert.alert('请输入有效的手机号');
-      return;
-    }
-
-    if (isSelected) {
-      Alert.alert('发送数据成功');
-      startCountdown();
-    } else {
-      Alert.alert('请勾选协议');
-    }
-  }, [isSelected, phoneNumber, startCountdown]);
-
-  useEffect(() => {
-    return () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
-    };
-  }, [intervalId]);
+  const onForgotPassword = () => {
+    Alert.alert('忘记密码', '请联系管理员重置密码');
+  };
 
   const dismissKeyboard = () => {
     Keyboard.dismiss();
@@ -115,30 +63,27 @@ export const Login = ({ route, navigation }: Props) => {
         <Text style={styles.loginText}>登录体验更多精彩</Text>
         <Text style={styles.register}>未注册手机验证后自动注册</Text>
         <View style={styles.inputWrapper}>
-          <Text style={styles.verification}> + 86</Text>
-          <View style={styles.line} />
+          <Text style={styles.verification}>账号 </Text>
           <TextInput
             style={styles.input}
-            placeholder="请输入手机号"
+            placeholder="请输入手机号/用户名"
             value={phoneNumber}
             placeholderTextColor="#999"
             onChangeText={setPhoneNumber}
-            keyboardType="numeric"
             onSubmitEditing={() => setVerificationCode('')}
           />
         </View>
         <View style={styles.inputWrapper}>
-          <Text style={styles.verification}>验证码</Text>
+          <Text style={styles.verification}>密码</Text>
           <TextInput
             style={styles.input}
-            placeholder="请输入验证码"
+            placeholder="请输入密码"
             value={verificationCode}
-            keyboardType="numeric"
             placeholderTextColor="#999"
             onChangeText={setVerificationCode}
           />
-          <TouchableOpacity onPress={onAgreementChange} style={styles.obtain} disabled={isObtainDisabled}>
-            <Text style={styles.obtainText}>{timer > 0 ? `${timer} s 后重新发送` : '获取验证码'}</Text>
+          <TouchableOpacity onPress={onForgotPassword} style={styles.obtain} >
+            <Text style={styles.obtainText}>忘记密码</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.protocolContainer}>
@@ -160,7 +105,7 @@ export const Login = ({ route, navigation }: Props) => {
         >
           登 陆
         </Button>
-        <Button style={styles.buttonTwo} onPress={handleRegister}>账 号 密 码 登 陆</Button>
+        <Button style={styles.buttonTwo} onPress={handleRegister}>手 机 号 快 捷 登 陆</Button>
       </View>
     </TouchableWithoutFeedback>
   );

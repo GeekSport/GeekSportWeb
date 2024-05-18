@@ -3098,6 +3098,13 @@
     "@tamagui/use-controllable-state" "1.97.1"
     reforest "^0.13.0"
 
+"@tamagui/helpers-icon@1.97.1":
+  version "1.97.1"
+  resolved "https://registry.npmmirror.com/@tamagui/helpers-icon/-/helpers-icon-1.97.1.tgz#6d5d71aa15d200553f0e8df25e3efa0855487a89"
+  integrity sha512-WjfHEIL+KYJimF8anyVb36OzZjMaqgwQCpWNl3rDhLzhFXOH/AJdUNlwMV3mkwnd/E8SZQh56NDRDT76K06E0A==
+  dependencies:
+    "@tamagui/core" "1.97.1"
+
 "@tamagui/helpers-node@1.97.1":
   version "1.97.1"
   resolved "https://registry.npmmirror.com/@tamagui/helpers-node/-/helpers-node-1.97.1.tgz#b96c0191ecadb8fd1208a0fcc006ec133aff72f1"
@@ -3164,6 +3171,14 @@
     "@tamagui/stacks" "1.97.1"
     "@tamagui/text" "1.97.1"
     "@tamagui/web" "1.97.1"
+
+"@tamagui/lucide-icons@1.97.1":
+  version "1.97.1"
+  resolved "https://registry.npmmirror.com/@tamagui/lucide-icons/-/lucide-icons-1.97.1.tgz#31ab4cb33d24e4554e3514aa75aab5b355870e81"
+  integrity sha512-g1stOowtso2Ps25Oqz1dTKdhz2i6yrAzFgusMmnO9dSuRH8UNL+JcFOKkCJr476dGpqUg5XCPLAM/1YQLcKbXQ==
+  dependencies:
+    "@tamagui/core" "1.97.1"
+    "@tamagui/helpers-icon" "1.97.1"
 
 "@tamagui/normalize-css-color@1.97.1":
   version "1.97.1"

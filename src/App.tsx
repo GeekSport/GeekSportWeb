@@ -14,6 +14,7 @@ import SplashScreen from 'react-native-splash-screen'
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native'
 import { Login } from './components/common/Login'
+import { PasswordLogin } from './components/common/PasswordLogin'
 import { TabNavigator } from './components/common/TabNavigator'
 
 const Stack = createStackNavigator();
@@ -29,6 +30,10 @@ export default observer(function App() {
       <NavigationContainer>
         <Stack.Navigator >
           <Stack.Screen name="Login" component={Login} options={({ navigation }) => ({
+            headerShown: false,
+            animationEnabled: false,
+          })} />
+            <Stack.Screen name="PasswordLogin" component={PasswordLogin} options={({ navigation }) => ({
             headerShown: false,
             animationEnabled: false,
           })} />

@@ -17,9 +17,6 @@ type ThemeKey =
   | 'primary'// 主题色
   | 'secondary' // 次要主题色
 
-  | 'primary' // 主题色
-  | 'secondary' // 次要主题色
-
   | 'accent' // 强调色
   | 'red' // 红色，错误色
   | 'yellow' // 黄色，警告色
@@ -33,6 +30,8 @@ type ThemeKey =
   | 'textDefault' // 默认文本
   | 'textSecondary' // 次要文本
   | 'textMuted' // 禁用文本
+  | 'textFrame' // 边框
+
 
   | 'textTitle' // 标题文本
   | 'textLink' // 链接文本
@@ -40,40 +39,42 @@ type ThemeKey =
 type Theme = Record<ThemeKey, string>
 
 export const Default: Theme = {
-  primary: '#FFC0CB',
+  primary: '#00B96B',
   secondary: '#262626',
-  accent: '#4caf50',
+  accent: '#1E90FF',
   red: '#ff5722',
   yellow: '#ffeb3b',
-  grey: '#e3e3e3',
+  grey: '#000000',
   inverse: '#333333',
   border: '#BBBBBB',
   background: '#EEEEEE',
-  cardBackground: '#FFFFFF',
+  cardBackground: '#1a1a1a',
 
-  textDefault: '#555',
-  textSecondary: '#bbb',
+  textDefault: '#C9CACD',
+  textSecondary: '#636365',
   textMuted: '#eee',
+  textFrame: '#C9C9C9',
 
   textTitle: '#222',
-  textLink: '#000'
+  textLink: '#FFFFFF'
 }
 
 export const Dark: Theme = {
-  primary: '#FFC0CB',
+  primary: '#00B96B',
   secondary: '#262626',
-  accent: '#4caf50',
+  accent: '#1E90FF',
   red: '#ff5722',
   yellow: '#ffeb3b',
-  grey: '#3e3e3e',
+  grey: '#000000',
   inverse: '#FFFFFF',
   border: '#333333',
   background: '#000000',
   cardBackground: '#1a1a1a',
 
-  textDefault: '#999999',
-  textSecondary: '#777777',
+  textDefault: '#C9CACD',
+  textSecondary: '#636365',
   textMuted: '#333333',
+  textFrame: '#C9C9C9',
 
   textTitle: '#EEEEEE',
   textLink: '#FFFFFF'
