@@ -29,14 +29,14 @@ export default observer(function App() {
     <TamaguiProvider config={config}>
       <NavigationContainer>
         <Stack.Navigator >
-          <Stack.Screen name="Login" component={Login} options={({ navigation }) => ({
+          {/* <Stack.Screen name="Login" component={Login} options={({ navigation }) => ({
             headerShown: false,
             animationEnabled: false,
           })} />
             <Stack.Screen name="PasswordLogin" component={PasswordLogin} options={({ navigation }) => ({
             headerShown: false,
             animationEnabled: false,
-          })} />
+          })} /> */}
           <Stack.Screen name="TabNavigator" component={TabNavigator} options={({ navigation }) => ({
             headerShown: false,
             animationEnabled: false,

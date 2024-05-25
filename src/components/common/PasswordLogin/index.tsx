@@ -10,13 +10,10 @@ import { Check as CheckIcon } from '@tamagui/lucide-icons';
 import { Button, View, Checkbox } from 'tamagui';
 import { obStyles } from "@app/style/common/login"
 import { useFocusEffect } from '@react-navigation/native';
+import {  NavigationProps } from '@app/types/props';
 
-type Props = {
-  route: any;
-  navigation: any;
-};
 
-export const PasswordLogin = ({ route, navigation }: Props) => {
+export const PasswordLogin = ({ route, navigation }:  NavigationProps) => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [verificationCode, setVerificationCode] = useState('');
   const [isSelected, setSelection] = useState(false);

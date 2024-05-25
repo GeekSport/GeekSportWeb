@@ -98,6 +98,7 @@ export const TabNavigator = observer(function TabNavigator() {
         component={Personal}
         options={({ route, navigation }) => {
           return {
+            headerShown: false,
             tabBarLabel: ({ color,focused }) => (
               <AutoI18nTitle
                 focused={focused} 

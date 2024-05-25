@@ -5,24 +5,20 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { Keyboard, TextInput, StyleSheet, Image, Text, Alert, TouchableOpacity, TouchableWithoutFeedback} from 'react-native';
+import { Keyboard, TextInput, Image, Text, Alert, TouchableOpacity, TouchableWithoutFeedback} from 'react-native';
 import { Check as CheckIcon } from '@tamagui/lucide-icons';
 import { Button, View, Checkbox } from 'tamagui';
 import { useFocusEffect } from '@react-navigation/native';
-import { obStyles  } from "@app/style/common/login"
+import { obStyles  } from "@app/style/common/login";
+import {  NavigationProps } from '@app/types/props';
 
-
-type Props = {
-  route: any;
-  navigation: any;
-};
 
 const validatePhoneNumber = (phoneNumber: string) => {
   const phoneRegex = /^1[3-9]\d{9}$/;
   return phoneRegex.test(phoneNumber);
 };
 
-export const Login = ({ route, navigation }: Props) => {
+export const Login = ({ route, navigation }: NavigationProps) => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [verificationCode, setVerificationCode] = useState('');
   const [isSelected, setSelection] = useState(false);
