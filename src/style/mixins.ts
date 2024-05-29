@@ -27,6 +27,11 @@ const mixins = StyleSheet.create({
   // 头部按钮
   headerButton: {
     paddingHorizontal: sizes.gap
+  },
+  // 水平排列
+  level:{
+    flexDirection: 'row',
+    justifyContent: 'space-around',
   }
 })
 

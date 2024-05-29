@@ -22,6 +22,7 @@ const weeksToShow = 12;
 const getLastThreeMonthsData = (data: Record<string, number[]>): Record<string, number[]> => {
   const result: Record<string, number[]> = {};
   const now = new Date();
+  // 只显示近三个月的数据
   for (let i = 2; i >= 0; i--) {
     const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
     const yearMonth = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}`;
@@ -78,6 +79,7 @@ const Calendar: React.FC = () => {
     return columns;
   };
 
+  // 分组
   const groupDaysByMonth = (): Record<string, Date[]> => {
     const grouped: Record<string, Date[]> = {};
     allDays.forEach((date) => {
@@ -116,7 +118,7 @@ const Calendar: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     marginBottom: sizes.gap,
-    margin: sizes.gap,
+    margin: sizes.gap * 0.8,
     borderRadius: sizes.gap * 0.3,
     backgroundColor: '#FFFFFF',
     overflow: 'hidden',
