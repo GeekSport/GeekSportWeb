@@ -21,6 +21,17 @@ import WelfareIcon from '@app/assets/svg/welfareIcon.svg';
 import ComunicationIcon from '@app/assets/svg/communicationIcon.svg';
 import InviteIcon from '@app/assets/svg/inviteIcon.svg';
 
+import CurriculumIcon from '@app/assets/svg/curriculumIcon.svg';
+import EncourageIcon from '@app/assets/svg/encourageIcon.svg';
+import GeneralizationIcon from '@app/assets/svg/generalizationIcon.svg';
+import FeedbackIcon from '@app/assets/svg/feedbackIcon.svg';
+
+import PlanIcon from '@app/assets/svg/planIcon.svg';
+import ArticleIcon from '@app/assets/svg/articleIcon.svg';
+import ShareIcon from '@app/assets/svg/shareIcon.svg';
+import SetupIcon from '@app/assets/svg/setupIcon.svg';
+
+
 function Personal({ route, navigation }: { route: any, navigation: any }) {
   const { styles } = obStyles
 
@@ -101,54 +112,38 @@ function Personal({ route, navigation }: { route: any, navigation: any }) {
         <View style={styles.setUp}>
           <View style={styles.additionalSections}>
             <View style={styles.actionButton}>
-              <TouchableOpacity>
-                <Iconfont name="kecheng" size={39} className='mb-2' />
-              </TouchableOpacity>
-              <Text>课程中心</Text>
+              <CurriculumIcon style={styles.actionIcon} width={30} height={40} />
+              <Text style={styles.fonIcon}>课程中心</Text>
             </View>
             <View style={styles.actionButton}>
-              <TouchableOpacity>
-                <Iconfont name="tuiguangshouyi" size={45} className='mb-2' />
-              </TouchableOpacity>
-              <Text>賺钱推广</Text>
+              <GeneralizationIcon style={styles.actionIcon} width={30} height={40} />
+              <Text style={styles.fonIcon}>有偿推广</Text>
             </View>
             <View style={styles.actionButton}>
-              <TouchableOpacity>
-                <Iconfont name="pingfen" size={45} className='mb-2' />
-              </TouchableOpacity>
-              <Text>鼓励一下</Text>
+              <EncourageIcon style={styles.actionIcon} width={32} height={40} />
+              <Text style={styles.fonIcon}>鼓励一下</Text>
             </View>
             <View style={styles.actionButton}>
-              <TouchableOpacity>
-                <Iconfont name="yjfk" size={45} className='mb-2' />
-              </TouchableOpacity>
-              <Text>意见反馈</Text>
+              <FeedbackIcon style={styles.actionIcon} width={33} height={40} />
+              <Text style={styles.fonIcon}>意见反馈</Text>
             </View>
           </View>
           <View style={styles.additionalSections}>
             <View style={styles.actionButton}>
-              <TouchableOpacity>
-                <Iconfont name="fenxiang" size={39} className='mb-2' />
-              </TouchableOpacity>
-              <Text>快速分享</Text>
+              <ShareIcon style={styles.actionIcon} width={30} height={40} />
+              <Text style={styles.fonIcon}>快速分享</Text>
             </View>
             <View style={styles.actionButton}>
-              <TouchableOpacity>
-                <Iconfont name="pingfen" size={45} className='mb-2' />
-              </TouchableOpacity>
-              <Text>训练计划</Text>
+              <PlanIcon style={styles.actionIcon} width={38} height={40} />
+              <Text style={styles.fonIcon}>训练计划</Text>
             </View>
             <View style={styles.actionButton}>
-              <TouchableOpacity>
-                <Iconfont name="pingfen" size={45} className='mb-2' />
-              </TouchableOpacity>
-              <Text>技巧文章</Text>
+              <ArticleIcon style={styles.actionIcon} width={31} height={40} />
+              <Text style={styles.fonIcon}>技巧文章</Text>
             </View>
             <View style={styles.actionButton}>
-              <TouchableOpacity>
-                <Iconfont name="shezhi" size={45} className='mb-2' />
-              </TouchableOpacity>
-              <Text>系统设置</Text>
+              <SetupIcon style={styles.actionIcon} width={34} height={40} />
+              <Text style={styles.fonIcon}>系统设置</Text>
             </View>
           </View>
         </View>
@@ -257,8 +252,9 @@ export const obStyles = observable({
       },
       setUp: {
         flexDirection: 'column',
-        height: sizes.gap * 11.3,
+        height: sizes.gap * 10.5,
         margin: sizes.gap * 0.8,
+        marginTop: sizes.gap * 0.5,
         padding: sizes.gap * 0.5,
         borderRadius: sizes.gap * 0.3,
         backgroundColor: '#FFFFFF',
@@ -272,6 +268,9 @@ export const obStyles = observable({
         ...mixins.colCenter,
         padding: 10,
       },
+      fonIcon: {
+        fontSize: sizes.gap * 0.66,
+      }
     });
   }
 })

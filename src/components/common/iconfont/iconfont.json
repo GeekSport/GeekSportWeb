@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "4881670",
+      "name": "项目计划-01",
+      "font_class": "xiangmujihua-",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "32303237",
+      "name": "新增计划",
+      "font_class": "xinzengjihua",
+      "unicode": "e809",
+      "unicode_decimal": 59401
+    },
+    {
+      "icon_id": "1447799",
+      "name": "章节&课程",
+      "font_class": "zhangjiekecheng",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "6517455",
+      "name": "文件-计划",
+      "font_class": "wj-jh",
+      "unicode": "e70e",
+      "unicode_decimal": 59150
+    },
+    {
+      "icon_id": "11124968",
+      "name": "文章",
+      "font_class": "16",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
       "icon_id": "19500560",
       "name": "Square",
       "font_class": "rxa-heart-message-filled",
