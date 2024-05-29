@@ -3,36 +3,8 @@
   "name": "GeekSportAPP",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
-  "description": "供 App 使用",
+  "description": "",
   "glyphs": [
-    {
-      "icon_id": "12696605",
-      "name": "integral",
-      "font_class": "integral",
-      "unicode": "e821",
-      "unicode_decimal": 59425
-    },
-    {
-      "icon_id": "12696606",
-      "name": "integral-in",
-      "font_class": "integral-outline",
-      "unicode": "e822",
-      "unicode_decimal": 59426
-    },
-    {
-      "icon_id": "13901301",
-      "name": "layer-in",
-      "font_class": "sucai",
-      "unicode": "e833",
-      "unicode_decimal": 59443
-    },
-    {
-      "icon_id": "13901302",
-      "name": "layer",
-      "font_class": "sucai-outline",
-      "unicode": "e834",
-      "unicode_decimal": 59444
-    },
     {
       "icon_id": "19500560",
       "name": "Square",
@@ -57,7 +29,7 @@
     {
       "icon_id": "670191",
       "name": "Home",
-      "font_class": "Home",
+      "font_class": "yduizhuye",
       "unicode": "e6a0",
       "unicode_decimal": 59040
     },

@@ -53,7 +53,7 @@ export const TabNavigator = observer(function TabNavigator() {
               />
             ),
             tabBarIcon: ({ focused }) =>
-              <TabBarIcon focused={focused} iconNameDefault="Home" iconNameFocused="yduizhuyexuanzhong"  />,
+              <TabBarIcon focused={focused} iconNameDefault="yduizhuye" iconNameFocused="yduizhuyexuanzhong"  />,
           }
         }}
       />

@@ -13,7 +13,13 @@ import fonts from '@app/style/fonts';
 import sizes from '@app/style/sizes';
 import mixins from '@app/style/mixins';
 import colors from '@app/style/colors';
+import Calendar  from '@app/components/common/Calendar'
 import { Iconfont } from '@app/components/common/iconfont';
+import AuthenticationIcon from '@app/assets/svg/authenticationIcon.svg';
+import SigningIcon from '@app/assets/svg/signingIcon.svg';
+import WelfareIcon from '@app/assets/svg/welfareIcon.svg';
+import ComunicationIcon from '@app/assets/svg/communicationIcon.svg';
+import InviteIcon from '@app/assets/svg/inviteIcon.svg';
 
 function Personal({ route, navigation }: { route: any, navigation: any }) {
   const { styles } = obStyles
@@ -28,7 +34,7 @@ function Personal({ route, navigation }: { route: any, navigation: any }) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <View style={styles.headerIcons}>
+        <View style={styles.headerIcons} className='text-green-600'>
           <TouchableOpacity>
             <Iconfont name="taiyangtianqi" size={22} />
           </TouchableOpacity>
@@ -39,18 +45,20 @@ function Personal({ route, navigation }: { route: any, navigation: any }) {
         <View style={styles.profile}>
           <Image
             style={styles.avatar}
-            source={require('@app/assets/images/geekSport.png')} 
+            source={require('@app/assets/images/Wx.jpeg')}
           />
           <View style={styles.headerText}>
             <Text style={styles.username}>JedediahXu</Text>
             <View style={styles.badges}>
-              <Text style={styles.badge}>已认证</Text>
-              <Text style={styles.badge}>超级达人</Text>
+              <View style={styles.badge}>
+                <AuthenticationIcon style={styles.badgeIcon} width={26} height={26} />
+                <Text style={styles.badgeText}>已认证</Text>
+              </View>
             </View>
           </View>
           <TouchableOpacity style={styles.homepage}>
             <Text style={styles.homepageText}>个人主页</Text>
-            <Iconfont name="jiantou" size={22} />
+            <Iconfont style={styles.homepageText} name="jiantou"  />
           </TouchableOpacity>
         </View>
 
@@ -71,29 +79,24 @@ function Personal({ route, navigation }: { route: any, navigation: any }) {
 
         <View style={styles.actions}>
           <View style={styles.actionButton}>
+          <SigningIcon style={styles.actionIcon} width={55} height={55} />
             <Text>连续签到</Text>
           </View>
           <View style={styles.actionButton}>
+          <WelfareIcon style={styles.actionIcon}  width={55}  height={55} />
             <Text>福利兑换</Text>
           </View>
           <View style={styles.actionButton}>
+          <ComunicationIcon style={styles.actionIcon}  width={55}  height={55} />
             <Text>联系人</Text>
           </View>
           <View style={styles.actionButton}>
+          <InviteIcon style={styles.actionIcon}  width={55}  height={55} />
             <Text>邀请好友</Text>
           </View>
         </View>
 
-        <View style={styles.activity}>
-          <Text>近期动态</Text>
-          <View style={styles.calendar}>
-            <View style={styles.calendarRow}>
-              <View style={styles.calendarDay}></View>
-              <View style={styles.calendarDay}></View>
-              <View style={styles.calendarDay}></View>
-            </View>
-          </View>
-        </View>
+         <Calendar />
 
         <View style={styles.additionalSections}>
           <View style={styles.section}>
@@ -133,21 +136,18 @@ export const obStyles = observable({
     return StyleSheet.create({
       header: {
         alignItems: 'flex-end',
-        marginBottom: sizes.gap * 0.7,
+        marginBottom: sizes.gap * 0.5,
         marginTop: sizes.gap * 3,
         marginRight: sizes.gap * 1.7,
       },
       scrollContent: {
         flex: 1,
-        backgroundColor: '#F4F5F6',
       },
       profile: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        ...mixins.rowCenter,
         justifyContent: 'space-between',
-        padding: 20,
-        backgroundColor: '#fff',
-        marginBottom: 10,
+        padding: sizes.gap,
+        marginBottom: sizes.gap - 10,
       },
       container: {
         flex: 1,
@@ -156,80 +156,92 @@ export const obStyles = observable({
         alignItems: 'flex-end',
       },
       avatar: {
-        width: 60,
-        height: 60,
-        borderRadius: 30,
+        width: 67,
+        height: 67,
+        borderRadius: 60,
       },
       headerText: {
-        flex: 1,  
-        marginLeft: 10,
+        flex: 1,
+        marginLeft: sizes.gap - 7,
       },
       username: {
-        fontSize: 20,
-        fontWeight: 'bold',
+        fontSize: sizes.gap * 1,
       },
       badges: {
         flexDirection: 'row',
         marginTop: 5,
       },
       badge: {
-        backgroundColor: '#FFD700',
-        borderRadius: 10,
-        paddingHorizontal: 5,
-        marginRight: 5,
+        ...mixins.rowCenter,
+        borderRadius: sizes.gap - 12,
+        height: sizes.gap + 3,
+        left: sizes.gap * 0.3,
+        top: sizes.gap * 0.3,
+        paddingLeft: 0,
+        backgroundColor: '#CFE4FF',
+        paddingHorizontal: sizes.gap * 0.6,
+        paddingVertical: sizes.gap * 0.1,
+      },
+      badgeIcon:{
+        right: sizes.gap * 0.3,
+      },
+      actionIcon:{
+        ...mixins.rowCenter,
+        right: sizes.gap * 0.1,
+        marginTop: sizes.gap * 0.1,
+        marginBottom: sizes.gap * 0.2,
+      },
+      badgeText: {
+        color:'#044D81',
+        fontSize: sizes.gap * 0.65,
       },
       homepage: {
-        flexDirection: 'row',
-        alignItems: 'center', 
+        ...mixins.rowCenter,
       },
       homepageText: {
-        fontSize: 16,
+        fontSize: sizes.gap * 0.75,
         color: '#888',
-        marginRight: 5,
+        marginBottom: sizes.gap * 1.2,
+        marginRight: sizes.gap * 0.3,
       },
       stats: {
         flexDirection: 'row',
         justifyContent: 'space-around',
-        marginBottom: 20,
+        marginBottom: sizes.gap * 0.5,
       },
       statItem: {
         alignItems: 'center',
       },
       statNumber: {
-        fontSize: 18,
-        fontWeight: 'bold',
+        fontSize: sizes.gap * 1.2,
+        marginBottom: sizes.gap * 0.2,
       },
       statLabel: {
-        fontSize: 14,
+        fontSize: sizes.gap * 0.78,
         color: '#888',
       },
       actions: {
         flexDirection: 'row',
         justifyContent: 'space-around',
-        marginBottom: 20,
+        marginBottom: sizes.gap * 0.8,
+        height: sizes.gap * 5.2,
+        margin: sizes.gap,
+        borderRadius: sizes.gap * 0.3,
+        backgroundColor: '#FFFFFF',
       },
       actionButton: {
         alignItems: 'center',
         padding: 10,
-        backgroundColor: '#f0f0f0',
         borderRadius: 5,
       },
       activity: {
-        marginBottom: 20,
-      },
-      calendar: {
+        height: sizes.gap * 12,
         flexDirection: 'row',
-        flexWrap: 'wrap',
-      },
-      calendarRow: {
-        flexDirection: 'row',
-      },
-      calendarDay: {
-        width: 20,
-        height: 20,
-        backgroundColor: '#90ee90',
-        margin: 2,
-        borderRadius: 5,
+        justifyContent: 'space-around',
+        marginBottom: sizes.gap,
+        margin: sizes.gap,
+        borderRadius: sizes.gap * 0.3,
+        backgroundColor: '#FFFFFF',
       },
       additionalSections: {
         flexDirection: 'row',
