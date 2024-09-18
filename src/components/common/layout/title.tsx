@@ -2,7 +2,6 @@
  * Common header
  * @file 全局公共头部组件
  * @module app/components/layout/header
- * @author Surmon <https://github.com/surmon-china>
  */
 
 import React from 'react'
